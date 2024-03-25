@@ -1,5 +1,6 @@
 # Rainyun_AutoSignIn
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn?ref=badge_shield)  [![每日签到](https://github.com/IcyBlue17/Rainyun_AutoSignIn/actions/workflows/main.yml/badge.svg)](https://github.com/IcyBlue17/Rainyun_AutoSignIn/actions/workflows/main.yml)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn?ref=badge_shield)  [![每日签到](https://github.com/IcyBlue17/Rainyun_AutoSignIn/actions/workflows/main.yml/badge.svg)](https://github.com/IcyBlue17/Rainyun_AutoSignIn/actions/workflows/main.yml) 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn.svg?type=shield&issueType=security)](https://app.fossa.com/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn?ref=badge_shield&issueType=security)
 
 自动签到脚本for雨云 ，提供shell文件/Github Action两种方式
 
