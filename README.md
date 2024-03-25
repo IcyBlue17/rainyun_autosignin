@@ -3,6 +3,6 @@
 
 ## 运行
 
-''' shell
+```shell
 https://raw.githubusercontent.com/IcyBlue17/Rainyun_AutoSignIn/main/AutoSignin.sh
-'''
+```
