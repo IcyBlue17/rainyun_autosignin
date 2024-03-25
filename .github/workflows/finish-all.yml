@@ -2,7 +2,8 @@ name: 每日签到
 
 on:
   schedule:
-  - workflow_dispatch:
+    - cron: '30 4 * * *'
+  workflow_dispatch:
 
 jobs:
   daily-checkin:
