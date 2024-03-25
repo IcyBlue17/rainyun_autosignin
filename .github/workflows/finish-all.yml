@@ -22,5 +22,5 @@ jobs:
         curl -s -X POST \
           -H "Content-Type: application/json" \
           -H "x-api-key: ${{ secrets.RAINYUN_API_KEY }}" \
-          -d '{"task_name": "绑定邮箱"}' \
+          -d '{"task_name": "关注雨云B站号"}' \
           https://api.v2.rainyun.com/user/reward/tasks
