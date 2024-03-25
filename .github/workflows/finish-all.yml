@@ -1,9 +1,12 @@
 name: 完成全部
 
 on:
-  schedule:
-    - cron: '30 4 * * *'
   workflow_dispatch:
+    inputs:
+      trigger:
+        required: true
+        type: string
+        default: "manual"
 
 jobs:
   finish-all:
