@@ -4,5 +4,5 @@
 ## 运行
 
 ```shell
-https://raw.githubusercontent.com/IcyBlue17/Rainyun_AutoSignIn/main/AutoSignin.sh
+curl -s https://raw.githubusercontent.com/IcyBlue17/Rainyun_AutoSignIn/main/AutoSignin.sh | sh
 ```
