@@ -11,16 +11,12 @@ jobs:
 
     steps:
     - name: 发送签到请求
-      uses: appleboy/curl-action@v0.2.0
-      with:
-        url: https://api.v2.rainyun.com/user/reward/tasks
-        method: POST
-        headers:
-          Content-Type: application/json
-          X-Api-Key: ${{ secrets.RAINYUN_API_KEY }}
-        body: |-
-          {
-            "task_name": "每日签到"
-          }
+      run: |
+        curl -s -X POST \
+          -H "Content-Type: application/json" \
+          -H "x-api-key: ${{ secrets.RAINYUN_API_KEY }}" \
+          -d '{"task_name": "每日签到"}' \
+          https://api.v2.rainyun.com/user/reward/tasks
+
     - name: 输出请求结果
       run: echo "请求结果：$?"
