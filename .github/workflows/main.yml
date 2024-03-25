@@ -10,6 +10,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: 获取用户信息
+      run: |
+        curl -s -X GET \
+          -H "Content-Type: application/json" \
+          -H "x-api-key: ${{ secrets.RAINYUN_API_KEY }}" \
+          https://api.v2.rainyun.com/user/
+
+    - name: 解析 JSON 并存储结果
+      run: |
+        uid=$(echo ${{ steps.get-user-info.outputs.response }} | jq -r '.data.ID')
+        username=$(echo ${{ steps.get-user-info.outputs.response }} | jq -r '.data.Name')
+        email=$(echo ${{ steps.get-user-info.outputs.response }} | jq -r '.data.Email' | cut -d '@' -f 1,2)
+
+    - name: 输出用户信息
+      run: |
+        echo "本次登录的用户信息"
+        echo "用户 ID：$uid"
+        echo "用户名：$username"
+        echo "邮箱地址：$email"
+
     - name: 发送签到请求
       run: |
         curl -s -X POST \
@@ -19,4 +39,4 @@ jobs:
           https://api.v2.rainyun.com/user/reward/tasks
 
     - name: 输出请求结果
-      run: echo "请求结果：$?"
+      run: echo "接口返回：$?"
