@@ -18,9 +18,17 @@ jobs:
           -H "x-api-key: ${{ secrets.RAINYUN_API_KEY }}" \
           -d '{"task_name": "关注雨云淘宝店"}' \
           https://api.v2.rainyun.com/user/reward/tasks
+          
         echo 正在完成关注b站任务
         curl -s -X POST \
           -H "Content-Type: application/json" \
           -H "x-api-key: ${{ secrets.RAINYUN_API_KEY }}" \
           -d '{"task_name": "关注雨云B站号"}' \
+          https://api.v2.rainyun.com/user/reward/tasks
+        echo 正在完成加入q群任务
+
+        curl -s -X POST \
+          -H "Content-Type: application/json" \
+          -H "x-api-key: ${{ secrets.RAINYUN_API_KEY }}" \
+          -d '{"task_name": "加入Q群"}' \
           https://api.v2.rainyun.com/user/reward/tasks
