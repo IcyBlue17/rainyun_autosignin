@@ -3,7 +3,9 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn?ref=badge_shield)  [![每日签到](https://github.com/IcyBlue17/Rainyun_AutoSignIn/actions/workflows/main.yml/badge.svg)](https://github.com/IcyBlue17/Rainyun_AutoSignIn/actions/workflows/main.yml) 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn.svg?type=shield&issueType=security)](https://app.fossa.com/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn?ref=badge_shield&issueType=security)
 
-自动签到脚本for雨云 ，提供shell文件/Github Action两种方式
+自动签到脚本for雨云 ，提供shell文件/Github Action两种方式。  
+并且增加了一个一键完成积分任务的功能。后期会完善成一个使用Github调用雨云api实现很多功能的项目。  
+
 
 ## 运行Shell文件自动签到（不推荐，好久没更新了）
 
@@ -17,7 +19,12 @@ curl -s https://raw.githubusercontent.com/IcyBlue17/Rainyun_AutoSignIn/main/Auto
 
 ## 使用Github Action一键完成积分任务  
 
-同上，运行action时选取"一键完成任务"的action并手动触发一次即可  
+同上，运行action时选取"一键完成任务"的action并手动触发一次即可    
+
+## 关于为什么我要写这个项目（个人观点）  
+1.雨云的APIKEY可以直接获取到实名信息，不是太放心使用非字部署的服务  
+2.Github Action足够稳定而且零成本。  
+
 
 
 
