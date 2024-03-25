@@ -1,4 +1,3 @@
-
 # Rainyun_AutoSignIn
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn?ref=badge_shield)  [![每日签到](https://github.com/IcyBlue17/Rainyun_AutoSignIn/actions/workflows/main.yml/badge.svg)](https://github.com/IcyBlue17/Rainyun_AutoSignIn/actions/workflows/main.yml) 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn.svg?type=shield&issueType=security)](https://app.fossa.com/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn?ref=badge_shield&issueType=security)
@@ -22,7 +21,7 @@ curl -s https://raw.githubusercontent.com/IcyBlue17/Rainyun_AutoSignIn/main/Auto
 同上，运行action时选取"一键完成任务"的action并手动触发一次即可    
 
 ## 关于为什么我要写这个项目（个人观点）  
-1.雨云的APIKEY可以直接获取到实名信息，不是太放心使用非字部署的服务  
+1.雨云的APIKEY可以直接获取到实名信息，不是太放心使用非自部署的服务  
 2.Github Action足够稳定而且零成本。  
 
 
