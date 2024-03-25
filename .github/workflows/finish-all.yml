@@ -2,7 +2,7 @@ name: 每日签到
 
 on:
   schedule:
-  workflow_dispatch:
+  - workflow_dispatch:
 
 jobs:
   daily-checkin:
