@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 发请求
+    - name: 发送签到请求
       run: |
         curl -X POST \
           -H "x-api-key: ${{ secrets.RAINYUN_API_KEY }}" \
