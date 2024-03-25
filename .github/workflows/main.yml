@@ -2,7 +2,7 @@ name: 每日签到
 
 on:
   schedule:
-    - cron: '0 8 * * * TZ=Asia/Shanghai'
+    - cron: '30 4 * * *'
   workflow_dispatch:
 
 jobs:
