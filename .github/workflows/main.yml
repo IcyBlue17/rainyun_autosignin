@@ -17,12 +17,3 @@ jobs:
           -H "x-api-key: ${{ secrets.RAINYUN_API_KEY }}" \
           -d '{"task_name": "每日签到"}' \
           https://api.v2.rainyun.com/user/reward/tasks
-
-    - name: 解析 JSON 并存储结果
-      run: |
-        apt update
-        apt install jq
-        output=$(echo ${{ steps.send-request.outputs.response }} | jq -r '.message')
-
-    - name: 输出结果
-      run: echo "接口返回：$output"
