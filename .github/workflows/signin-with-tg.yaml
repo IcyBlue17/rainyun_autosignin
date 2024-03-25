@@ -1,4 +1,4 @@
-name: 每日签到(tg推送)
+name: 每日签到
 
 on:
   schedule:
@@ -19,8 +19,12 @@ jobs:
           https://api.v2.rainyun.com/user/reward/tasks
 
     - name: 发送 Telegram 通知
-      uses: akhilrex/telegram-notify@v1
-      with:
-        bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        chat_id: ${{ secrets.TELEGRAM_CHAT_ID }}
-        text: "每日签到已完成！"
+      run: |
+        curl -s -X POST \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bot ${{ secrets.TELEGRAM_BOT_TOKEN }}" \
+          -d '{
+            "chat_id": ${{ secrets.TELEGRAM_CHAT_ID }},
+            "text": "每日签到已完成！"
+          }' \
+          "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
