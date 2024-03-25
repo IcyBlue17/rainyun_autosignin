@@ -1,4 +1,4 @@
-name: 完成全部
+name: 完成全部可以api完成的任务
 
 on:
   workflow_dispatch:
