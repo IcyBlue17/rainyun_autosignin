@@ -1,3 +1,4 @@
+
 # Rainyun_AutoSignIn
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn?ref=badge_shield)  [![每日签到](https://github.com/IcyBlue17/Rainyun_AutoSignIn/actions/workflows/main.yml/badge.svg)](https://github.com/IcyBlue17/Rainyun_AutoSignIn/actions/workflows/main.yml) 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn.svg?type=shield&issueType=security)](https://app.fossa.com/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn?ref=badge_shield&issueType=security)
@@ -13,6 +14,11 @@ curl -s https://raw.githubusercontent.com/IcyBlue17/Rainyun_AutoSignIn/main/Auto
 1. Fork此仓库
 2. 在你自己fork的仓库的Settings - Secrets and variables - Actions - Repository secrets中创建一个名为RAINYUN_API_KEY的Repository secret，值为你获取的雨云apikey。
 3. 为这个仓库启用Github Actions。然后运行一次测试。如果返回"未达成条件"，或者"任务成功"为正确配置。此后这个workflow将定时执行。如果返回需要登录，请检查你的api密钥是否填写在了正确的位置，你是否正确填写apikey。
+
+## 使用Github Action一键完成积分任务  
+
+同上，运行action时选取"一键完成任务"的action并手动触发一次即可  
+
 
 
 
