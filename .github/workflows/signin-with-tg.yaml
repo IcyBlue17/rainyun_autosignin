@@ -1,4 +1,4 @@
-name: 每日签到
+name: 每日签到（tg通知）
 
 on:
   schedule:
