@@ -6,6 +6,8 @@
 ```shell
 curl -s https://raw.githubusercontent.com/IcyBlue17/Rainyun_AutoSignIn/main/AutoSignin.sh | sh
 ```
+# 许可  
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn?ref=badge_large&issueType=license)  
 
   
