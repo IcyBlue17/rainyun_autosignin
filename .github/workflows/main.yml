@@ -20,6 +20,8 @@ jobs:
 
     - name: 解析 JSON 并存储结果
       run: |
+        apt update
+        apt install jq
         output=$(echo ${{ steps.send-request.outputs.response }} | jq -r '.message')
 
     - name: 输出结果
