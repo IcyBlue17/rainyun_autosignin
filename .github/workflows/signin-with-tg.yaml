@@ -11,12 +11,14 @@ jobs:
 
     steps:
     - name: 发送签到请求
+      id: checkin
       run: |
-        curl -s -X POST \
+        response=$(curl -s -X POST \
           -H "Content-Type: application/json" \
           -H "x-api-key: ${{ secrets.RAINYUN_API_KEY }}" \
           -d '{"task_name": "每日签到"}' \
-          https://api.v2.rainyun.com/user/reward/tasks
+          https://api.v2.rainyun.com/user/reward/tasks)
+        echo "::set-output name=response::$response"
 
     - name: 发送 Telegram 通知
       run: |
@@ -25,6 +27,6 @@ jobs:
           -H "Authorization: Bot ${{ secrets.TELEGRAM_BOT_TOKEN }}" \
           -d '{
             "chat_id": ${{ secrets.TELEGRAM_CHAT_ID }},
-            "text": "每日签到已完成！"
+            "text": "每日签到已完成！\n签到结果: '"${{ steps.checkin.outputs.response }}"'"
           }' \
           "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
