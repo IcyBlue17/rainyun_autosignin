@@ -2,7 +2,7 @@ name: 每日签到（tg通知）
 
 on:
   schedule:
-  - cron: '30 8 * * *'
+    - cron: '30 8 * * *'
   workflow_dispatch:
 
 jobs:
@@ -10,6 +10,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: 獲取信息
+      id: get-info
+      run: |
+        response=$(curl -s -X GET \
+          -H "Content-Type: application/json" \
+          -H "x-api-key: ${{ secrets.RAINYUN_API_KEY }}" \
+          https://api.v2.rainyun.com/user/)
+        name=$(echo $response | jq -r '.data.Name')
+        points=$(echo $response | jq -r '.data.Points')
+        icon_url=$(echo $response | jq -r '.data.IconUrl')
+        echo "::set-output name=name::$name"
+        echo "::set-output name=points::$points"
+        echo "::set-output name=icon_url::$icon_url"
+
+    - name: 发送用戶信息
+      run: |
+        curl -s -X POST \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bot ${{ secrets.TELEGRAM_BOT_TOKEN }}" \
+          -d '{
+            "chat_id": ${{ secrets.TELEGRAM_CHAT_ID }},
+            "photo": "'"${{ steps.get-info.outputs.icon_url }}"'",
+            "caption": "尊敬的（'"${{ steps.get-info.outputs.name }}"'）大人，即將為您執行簽到！當前剩餘積分（'"${{ steps.get-info.outputs.points }}"'）！"
+          }' \
+          "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendPhoto"
+
     - name: 发送签到请求
       id: checkin
       run: |
@@ -20,7 +46,7 @@ jobs:
           https://api.v2.rainyun.com/user/reward/tasks)
         echo "::set-output name=response::$response"
 
-    - name: 发送 Telegram 通知
+    - name: 发送签到结果
       run: |
         curl -s -X POST \
           -H "Content-Type: application/json" \
