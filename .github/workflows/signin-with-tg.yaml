@@ -32,7 +32,7 @@ jobs:
           -d '{
             "chat_id": ${{ secrets.TELEGRAM_CHAT_ID }},
             "photo": "'"${{ steps.get-info.outputs.icon_url }}"'",
-            "caption": "尊敬的（'"${{ steps.get-info.outputs.name }}"'）大人，即將為您執行簽到！當前剩餘積分（'"${{ steps.get-info.outputs.points }}"'）！"
+            "caption": "尊敬的'"${{ steps.get-info.outputs.name }}"'大人，即将为您签到！当前剩余积分'"${{ steps.get-info.outputs.points }}"'！"
           }' \
           "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendPhoto"
 
