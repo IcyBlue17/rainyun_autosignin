@@ -47,6 +47,6 @@ curl -s https://raw.githubusercontent.com/IcyBlue17/Rainyun_AutoSignIn/main/Auto
 - 一键卸载
   
 # 注意:因本人问题目前这个脚本不带卸载功能，如果你需要卸载请手动删除计划任务和计划脚本。我将很快更新。😭   
-# 202409 更新：放弃对脚本的维护
+# 202409 更新：放弃对脚本的维护，只維護action版
 
 
