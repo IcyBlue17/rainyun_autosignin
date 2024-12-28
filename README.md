@@ -1,4 +1,4 @@
-# Rainyun_AutoSignIn
+# 雨云已经更新签到，现在需要人机认证，本项目跑路
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn?ref=badge_shield) [![每日签到（tg通知）](https://github.com/IcyBlue17/rainyun_autosignin/actions/workflows/signin-with-tg.yaml/badge.svg)](https://github.com/IcyBlue17/rainyun_autosignin/actions/workflows/signin-with-tg.yaml)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn.svg?type=shield&issueType=security)](https://app.fossa.com/projects/git%2Bgithub.com%2FIcyBlue17%2FRainyun_AutoSignIn?ref=badge_shield&issueType=security)
 
